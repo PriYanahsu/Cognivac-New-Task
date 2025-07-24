@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       /* Base styles (mobile first) */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    height: 46px;
+    width: 100%;
+    max-width: 1320px;
+    margin: 20px auto 0;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.innerNav {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first {
+    height: 18px;
+    min-width: 198px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.second {
+    height: 24px;
+    min-width: 135px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.second1 {
+    width: 99px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.image {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav2 {
+    margin: 45px auto 0;
+    width: 100%;
+    max-width: 1320px;
+    height: auto;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.innerNav2 {
+    height: auto;
+    min-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.box {
+    height: 24px;
+    min-width: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.content1 {
+    height: auto;
+    width: 100%;
+    max-width: 1320px;
+    margin: 100px auto 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.contentNav {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cards {
+    width: 100%;
+    max-width: 268px;
+    height: 84px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.card1 {
+    height: 84px;
+    width: 84px;
+    min-width: 84px;
+    overflow: hidden;
+}
+
+.card1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cards2 {
+    height: 63px;
+    width: calc(100% - 94px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards2 h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cards2 p {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px 0 0 0;
+}
+
+.componentContent {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.componentContent img {
+    width: 100%;
+    height: auto;
+}
+
+.contentInner {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.innerCon1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.innerCon11 {
+    width: 100%;
+    height: 37px;
+    display: flex;
+    gap: 10px;
+}
+
+.innerCon111 {
+    height: 37px;
+    min-width: 81px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.innerCon112 {
+    height: 37px;
+    min-width: 117px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.innerCon12 {
+    height: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.innerCon12 p {
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.innerCon2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.innerCon21 {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.innerCon21 img {
+    width: 14px;
+    height: 1px;
+}
+
+.innerCon21 p {
+    font-size: 11.63px;
+}
+
+.innerCon22 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    height: 20px;
+    width: 100%;
+}
+
+.innerCon221 {
+    height: 19px;
+    width: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.innerCon221 p {
+    font-size: 14px;
+}
+
+.navSecond {
+    margin: 25px auto 0;
+    height: auto;
+    width: 100%;
+    max-width: 1320px;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.navSecup {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navSecup p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navSecIn {
+    height: 20px;
+    width: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navSecIn p {
+    font-size: 14px;
+}
+
+.containers2 {
+    height: auto;
+    width: 100%;
+    max-width: 1320px;
+    margin: 25px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.container2Up {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contInner1 {
+    width: 100%;
+    height: auto;
+}
+
+.contInner1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contInner2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.contInner21 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contInner211 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contInner211 p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.contInner2111 {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.contInner2111 p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.contInner21 img {
+    width: 100%;
+    height: auto;
+}
+
+.container2Down {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.containerDown2 {
+    height: auto;
+    width: 100%;
+}
+
+.containerDown2 img {
+    width: 100%;
+    height: auto;
+}
+
+.thirdBox {
+    height: auto;
+    width: 100%;
+    max-width: 1320px;
+    margin: 25px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.thirdBox1 img {
+    width: 100%;
+    height: auto;
+}
+
+.thirdBox2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.thirdBox21 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.thirdBox21 img {
+    width: 100%;
+    height: auto;
+}
+
+.thirdBox211 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.thirdBox2111 {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.thirdBox2111 p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.thirdBox2112 p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.contentBoxFour {
+    margin: 25px auto 0;
+    height: auto;
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.contentBoxFour1 {
+    height: auto;
+    width: 100%;
+}
+
+.contentBoxFour1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contentBoxFour11 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contentBoxFour111 {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.contentBoxFour111 p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.containerBoxFive {
+    margin: 25px auto 0;
+    height: auto;
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.containerBoxFive1 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.containerBoxFive1 img {
+    width: 100%;
+    height: auto;
+}
+
+.containerBoxFive11 {
+    height: auto;
+    width: 100%;
+}
+
+.containerBoxFive111 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.containerBoxFive111 p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.containerBoxFive111 img {
+    height: 1px;
+    width: 14px;
+}
+
+.internalP {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.footer {
+    width: 100%;
+    max-width: 1320px;
+    height: auto;
+    margin: 50px auto 0;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.footerUp {
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 10px;
+}
+
+.footerUp img {
+    width: 100%;
+    height: auto;
+}
+
+.footerinner {
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.last {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.lastLeft {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.leftInner1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.innerSub {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lastRight {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0 30px;
+    }
+    
+    .nav2 {
+        padding: 0 30px;
+    }
+    
+    .content1 {
+        padding: 0 30px;
+    }
+    
+    .contentNav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .cards {
+        width: calc(50% - 10px);
+        max-width: none;
+    }
+    
+    .innerCon12 p {
+        font-size: 30px;
+    }
+    
+    .contentInner {
+        flex-direction: row;
+    }
+    
+    .innerCon2 {
+        width: 156px;
+        align-items: flex-end;
+    }
+    
+    .container2Up {
+        flex-direction: row;
+    }
+    
+    .contInner21 {
+        flex-direction: row;
+        height: auto;
+    }
+    
+    .contInner21 img {
+        width: 50%;
+    }
+    
+    .container2Down {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .containerDown2 {
+        width: calc(50% - 10px);
+    }
+    
+    .thirdBox {
+        flex-direction: row;
+    }
+    
+    .thirdBox1 {
+        width: 60%;
+    }
+    
+    .thirdBox2 {
+        width: 38%;
+    }
+    
+    .contentBoxFour {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .contentBoxFour1 {
+        width: calc(50% - 10px);
+    }
+    
+    .containerBoxFive {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .containerBoxFive1 {
+        width: calc(50% - 10px);
+        flex-direction: row;
+    }
+    
+    .last {
+        flex-direction: row;
+    }
+    
+    .lastLeft {
+        flex-direction: row;
+    }
+    
+    .leftInner1 {
+        flex-direction: row;
+    }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    .innerCon12 p {
+        font-size: 36px;
+    }
+    
+    .cards {
+        width: calc(25% - 20px);
+    }
+    
+    .containerDown2 {
+        width: calc(33.333% - 10px);
+    }
+    
+    .contentBoxFour1 {
+        width: calc(25% - 10px);
+    }
+    
+    .containerBoxFive1 {
+        width: calc(33.333% - 10px);
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="navbar">
+            <div class="innerNav">
+                <div class="first">
+                    <img src="Group.png" alt="">
+                    <p>Tuesday, Octobar 29,2024</p>
+                </div>
+                <div class="second">
+                    <div class="second1">
+                        <p>The Menu</p>
+                        <img src="SVG.png" alt="">
+                    </div>
+                    <img src="Container.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="Link (1).png" alt="">
+        </div>
+
+        <div class="nav2">
+            <div class="innerNav2">
+                <div class="box">
+                    <p>World News</p>
+                </div>
+                <div class="box">
+                    <p>Politics</p>
+                </div>
+                <div class="box">
+                    <p>Business</p>
+                </div>
+                <div class="box">
+                    <p>Technology</p>
+                </div>
+                <div class="box">
+                    <p>Health</p>
+                </div>
+                <div class="box">
+                    <p>Sports</p>
+                </div>
+                <div class="box">
+                    <p>Culture</p>
+                </div>
+                <div class="box">
+                    <p>Podcast</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content1">
+        <div class="contentNav">
+            <div class="cards">
+                <div class="cards1">
+                    <img src="Frame 23.png" alt="">
+                </div>
+                <div class="cards2">
+                    <h4> WORLD NEWS</h1>
+                        <p>Economics policies are shaping international markets</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards1">
+                    <img src="66daa00a9ca7528191cd8a14_news-thumb-05.jpg.png" alt="">
+                </div>
+                <div class="cards2">
+                    <h4>TECHNOLOGY</h4>
+                    <p>The latest trends in AI and Innovation</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards1">
+                    <img src="66daa00a9ca7528191cd8a14_news-thumb-05.jpg (1).png" alt="">
+                </div>
+                <div class="cards2">
+                    <h4>HEALTH</h4>
+                    <p>Analyzing the effects of global health policies</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards1">
+                    <img src="66daa00a9ca7528191cd8a14_news-thumb-05.jpg (2).png" alt="">
+                </div>
+                <div class="cards2">
+                    <h4>SPORTS</h4>
+                    <p>Affect the ingirity and future of prefessional sports</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="componentContent">
+                <img src="Background.png" alt="">
+                <div class="contentInner">
+                    <div class="innerCon1">
+                        <div class="innerCon11">
+                            <div class="innerCon111">CULTURE</div>
+                            <div class="innerCon112">GUY HAWKINS</div>
+                        </div>
+                        <div class="innerCon12">
+                            <p>A deep dive into the influence of cultural movements on
+                                contemporary society</p>
+                        </div>
+                    </div>
+                    <div class="innerCon2">
+                        <div class="innerCon21">
+                            <p>Sep 9, 2024</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>06 Minute</p>
+                        </div>
+                        <div class="innerCon22">
+                            <div class="innerCon221">
+                                <p>Read Article</p>
+                            </div>
+                            <img src="Frame 34.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="navSecond">
+                <div class="navSecup">
+                    <p>LATEST NEWS</h4>
+                    <div class="navSecIn">
+                        <p>View All</p>
+                        <img src="Frame 34.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="containers2">
+                <div class="container2Up">
+                    <div class="contInner1">
+                        <img src="secondBoximg1.png" alt="">
+                    </div>
+                    <div class="contInner2">
+                        <div class="contInner21">
+                            <div class="contInner211">
+                                <div>
+                                    <p>The effects of geopolitical shifts on
+                                        global security</p>
+                                </div>
+                                <div class="contInner2111">
+                                    <p>World news</p>
+                                    <img src="Horizontal Divider.png" alt="">
+                                    <p>Sep 9, 2024</p>
+                                </div>
+                            </div>
+                            <img src="secondBoximg2.png" alt="">
+                        </div>
+                        <div class="contInner21">
+                            <div class="contInner211">
+                                <div>
+                                    <p>Affect the integrity and future of professional sports</p>
+                                </div>
+                                <div class="contInner2111">
+                                    <p>Sports</p>
+                                    <img src="Horizontal Divider.png" alt="">
+                                    <p>Sep 9, 2024</p>
+                                </div>
+                            </div>
+                            <img src="secondBoximg3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container2Down">
+                    <div class="containerDown2">
+                        <img src="secondBoximg4.png" alt="">
+                        <div class="containerDown211">
+                            <div>
+                                <p>Strategies for success in a competitive landscape</p>
+                            </div>
+                            <div class="contInner2111">
+                                <p>Business</p>
+                                <img src="Horizontal Divider.png" alt="">
+                                <p>Sep 9, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerDown2">
+                        <img src="secondBoximg5.png" alt="">
+                        <div class="containerDown211">
+                            <div>
+                                <p>Innovation hubs are transforming traditional business models</p>
+                            </div>
+                            <div class="contInner2111">
+                                <p>Business</p>
+                                <img src="Horizontal Divider.png" alt="">
+                                <p>Sep 9, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerDown2">
+                        <img src="secondBoximg6.png" alt="">
+                        <div class="containerDown211">
+                            <div>
+                                <p>Tailoring treatments to individual genetic profiles</p>
+                            </div>
+                            <div class="contInner2111">
+                                <p>Business</p>
+                                <img src="Horizontal Divider.png" alt="">
+                                <p>Sep 9, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="navSecond">
+                <div class="navSecup">
+                    <p>WORLD NEWS</h4>
+                    <div class="navSecIn">
+                        <p>View All</p>
+                        <img src="Frame 34.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="thirdBox">
+                <div class="thirdBox1">
+                    <img src="ThirdBoxImg1.png" alt="">
+                </div>
+                <div class="thirdBox2">
+                    <div class="thirdBox21">
+                        <img src="ThirdBoxImg2.png" alt="">
+                        <div class="thirdBox211">
+                            <div class="thirdBox2111">
+                                <p>Guy Hawkins</p>
+                                <img src="Horizontal Divider.png" alt="">
+                                <p>Sep 9, 2024</p>
+                            </div>
+                            <div class="thirdBox2112">
+                                <p>The global financial landscape and its implications for all</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thirdBox21">
+                        <img src="ThirdBoxImg3.png" alt="">
+                        <div class="thirdBox211">
+                            <div class="thirdBox2111">
+                                <p>Guy Hawkins</p>
+                                <img src="Horizontal Divider.png" alt="">
+                                <p>Sep 9, 2024</p>
+                            </div>
+                            <div class="thirdBox2112">
+                                <p>Examining the challenges and responses of nations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thirdBox21">
+                        <img src="ThirdBoxImg4.png" alt="">
+                        <div class="thirdBox211">
+                            <div class="thirdBox2111">
+                                <p>Guy Hawkins</p>
+                                <img src="Horizontal Divider.png" alt="">
+                                <p>Sep 9, 2024</p>
+                            </div>
+                            <div class="thirdBox2112">
+                                <p>A comprehensive analysis of the state of global affairs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="navSecond">
+                <div class="navSecup">
+                    <p>TECHNOLOGY NEWS</h4>
+                    <div class="navSecIn">
+                        <p>View All</p>
+                        <img src="Frame 34.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBoxFour">
+                <div class="contentBoxFour1">
+                    <img src="fourBox1.png" alt="">
+                    <div class="contentBoxFour11">
+                        <div class="contentBoxFour111">
+                            <p>Guy Hawkins</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Sep 9, 2024</p>
+                        </div>
+                        <p>Latest Innovations Pave the Way to a Sustainable Future</p>
+                    </div>
+                </div>
+                <div class="contentBoxFour1">
+                    <img src="FourBox2.png" alt="">
+                    <div class="contentBoxFour11">
+                        <div class="contentBoxFour111">
+                            <p>Guy Hawkins</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Sep 9, 2024</p>
+                        </div>
+                        <p>Latest Innovations Pave the Way to a Sustainable Future</p>
+                    </div>
+                </div>
+                <div class="contentBoxFour1">
+                    <img src="FourBox3.png" alt="">
+                    <div class="contentBoxFour11">
+                        <div class="contentBoxFour111">
+                            <p>Guy Hawkins</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Sep 9, 2024</p>
+                        </div>
+                        <p>Latest Innovations Pave the Way to a Sustainable Future</p>
+                    </div>
+                </div>
+                <div class="contentBoxFour1">
+                    <img src="FourBox4.png" alt="">
+                    <div class="contentBoxFour11">
+                        <div class="contentBoxFour111">
+                            <p>Guy Hawkins</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Sep 9, 2024</p>
+                        </div>
+                        <p>Latest Innovations Pave the Way to a Sustainable Future</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="navSecond">
+                <div class="navSecup">
+                    <p>PODCASTS</h4>
+                    <div class="navSecIn">
+                        <p>View All</p>
+                        <img src="Frame 34.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerBoxFive">
+                <div class="containerBoxFive1">
+                    <img src="Box5Img1.png" alt="">
+                    <div class="containerBoxFive11">
+                        <p>Riding the tide of innovation
+                            and inspiration</p>
+                        <p class="internalP">The latest trends, creative
+                            breakthroughs, and the visionary
+                            minds driving change</p>
+                        <div class="innerCon21">
+                            <p>10 minutes</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Guy Hawkins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerBoxFive1">
+                    <img src="Box5Img2.png" alt="">
+                    <div class="containerBoxFive11">
+                        <p>Where ideas come alive and stories unfold</p>
+                        <p class="internalP">This podcast explores the journey  from concept to creation, showcasing the stories.</p>
+                        <div class="innerCon21">
+                            <p>08 minutes</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Guy Hawkins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerBoxFive1">
+                    <img src="Box5Img3.png" alt="">
+                    <div class="containerBoxFive11">
+                        <p>Connecting ideas, people, and perspectives</p>
+                        <p class="internalP">This podcast bridges ideas, people, & perspectives, fostering meaningful conversations.</p>
+                        <div class="innerCon21">
+                            <p>12 minutes</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Guy Hawkins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerBoxFive1">
+                    <img src="Box5Img4.png" alt="">
+                    <div class="containerBoxFive11">
+                        <p>On the air capturing the voices of change</p>
+                        <p class="internalP">Brings you powerful stories and conversations with individuals who are making a difference.</p>
+                        <div class="innerCon21">
+                            <p>09 minutes</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Guy Hawkins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerBoxFive1">
+                    <img src="Box5Img5.png" alt="">
+                    <div class="containerBoxFive11">
+                        <p>The podcast where ideas take flight</p>
+                        <p class="internalP">Offering listeners a chance to hear how groundbreaking ideas are launched into the world.</p>
+                        <div class="innerCon21">
+                            <p>06 minutes</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Guy Hawkins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerBoxFive1">
+                    <img src="Box5Img6.png" alt="">
+                    <div class="containerBoxFive11">
+                        <p>Exploring thought-provoking topics weekly</p>
+                        <p class="internalP">A wide range of topics, offering fresh perspectives and in-depth analysis on issues.</p>
+                        <div class="innerCon21">
+                            <p>10 minutes</p>
+                            <img src="Horizontal Divider.png" alt="">
+                            <p>Guy Hawkins</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="footer">
+                <div class="footerUp">
+                    <img src="FooterImg1.png" alt="">
+                </div>
+                <div class="footerinner">
+                    <div class="last">
+                        <div class="lastLeft">
+                            <div class="leftInner1">
+                                <img src="FooterImg2.png" alt="">
+                                <div class="innerSub">
+                                    <p>Copyright © 2024 - The News - All rights reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lastRight">
+                            <div class="icons">
+                                <img src="icon1.png" alt="">
+                            </div>
+                            <div class="icons">
+                                <img src="icon2.png" alt="">
+                            </div>
+                            <div class="icons">
+                                <img src="icon3.png" alt="">
+                            </div>
+                            <div class="icons">
+                                <img src="icon5.png" alt="">
+                            </div>
+                            <div class="icons">
+                                <img src="icon4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
