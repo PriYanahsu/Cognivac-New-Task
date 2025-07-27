@@ -473,7 +473,7 @@ Containersss */
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding: -4px;
+    font-size: 13px;
 }
 
 
@@ -515,13 +515,21 @@ Containersss */
         /* border: 1px solid black; */
     }
 
+    .writtenPart3{
+        font-size: 14px;
+    }
+
     .innerImage {
         overflow: hidden;
         width: 100%;
     }
 
     .ContainersDatesUp1 {
-        font-size: 10px;
+        width: 70%;
+    }
+
+    .ContainersDatesUp1 p{
+        font-size: 8px;
     }
 
 }
