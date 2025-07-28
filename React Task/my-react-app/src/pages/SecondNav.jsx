@@ -18,13 +18,13 @@ const SecondNav = () => {
                 <div className="logoItem"><img src={img4} alt="Partner Logo 4" /></div>
                 <div className="logoItem"><img src={img5} alt="Partner Logo 5" /></div>
                 <div className="logoItem"><img src={img6} alt="Partner Logo 6" /></div>
-
+{/* 
                 <div className="logoItem"><img src={img1} alt="Partner Logo 1" /></div>
                 <div className="logoItem"><img src={img2} alt="Partner Logo 2" /></div>
                 <div className="logoItem"><img src={img3} alt="Partner Logo 3" /></div>
                 <div className="logoItem"><img src={img4} alt="Partner Logo 4" /></div>
                 <div className="logoItem"><img src={img5} alt="Partner Logo 5" /></div>
-                <div className="logoItem"><img src={img6} alt="Partner Logo 6" /></div>
+                <div className="logoItem"><img src={img6} alt="Partner Logo 6" /></div> */}
             </div>
         </div>
     </div>

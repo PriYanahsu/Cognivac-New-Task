@@ -3,7 +3,6 @@
     max-height: 100px;
     width: 100%;
     max-width: 1440px;
-    border-bottom: 1px solid #C1C5BF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,15 +12,18 @@
 
 .innerNav {
     width: 100%;
-    height: 75%;
+    max-width: 1360px;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #C1C5BF;
 }
 
 .innerNavLeft {
     height: 100%;
-    width: 40%;
+    width: 100%;
+    max-width: 619.55px;
     display: flex;
     justify-content: space-between;
     align-items: center;

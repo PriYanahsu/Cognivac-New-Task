@@ -1,5 +1,5 @@
 .secondNav {
-    max-width: 1440px;
+    max-width: 1204px;
     width: 100%;
     overflow: hidden;
     padding: 2rem 0;
@@ -15,9 +15,10 @@
 
 .logoTrack {
     display: flex;
+    /* justify-content: space-between; */
     align-items: center;
     width: max-content;
-    animation: scroll 20s linear infinite;
+    /* animation: scroll 20s linear infinite; */
 }
 
 .logoItem {
