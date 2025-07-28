@@ -1,0 +1,142 @@
+.homePage {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.homeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.homeContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.homeLeft {
+    flex: 1;
+    max-width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeLeft h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: #333;
+}
+
+.homeLeft .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.homeRight {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.imageFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+}
+
+.imageRow {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.imageItem {
+    flex: 1;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.imageItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imageItem:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments using only flex */
+@media (max-width: 1024px) {
+    .homeContent {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .homeLeft, .homeRight {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .homeLeft {
+        align-items: start;
+    }
+    
+    .imageFlexContainer {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeLeft h1 {
+        font-size: 2rem;
+    }
+    
+    .homeLeft .subtitle {
+        font-size: 1rem;
+    }
+    
+    .buttonGroup {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .homePage {
+        padding: 1rem;
+    }
+    
+    .homeLeft h1 {
+        font-size: 1.8rem;
+    }
+    
+    .imageRow {
+        flex-wrap: wrap;
+    }
+    
+    .imageItem {
+        min-width: calc(50% - 0.5rem);
+    }
+}

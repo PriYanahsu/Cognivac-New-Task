@@ -1,0 +1,13 @@
+.buttons {
+  padding: 3% 5%;
+  border: none;
+  background-color: #3A7326;
+  color: #FFFFFF;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.buttons:hover {
+  background-color: darkgreen;
+}

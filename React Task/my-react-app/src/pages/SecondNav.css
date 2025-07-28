@@ -1,0 +1,87 @@
+.secondNav {
+    max-width: 1440px;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logoMarquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logoTrack {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.logoItem {
+    flex-shrink: 0;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoItem img {
+    max-height: 40px;
+    width: auto;
+    max-width: 120px;
+}
+
+.logoItem:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .logoItem {
+        padding: 0 1.5rem;
+    }
+    
+    .logoItem img {
+        max-height: 35px;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .secondNav {
+        padding: 1.5rem 0;
+    }
+    
+    .logoItem {
+        padding: 0 1rem;
+    }
+    
+    .logoItem img {
+        max-height: 30px;
+        max-width: 80px;
+    }
+    
+    .logoTrack {
+        animation-duration: 15s;
+    }
+}
+
+@media (max-width: 480px) {
+    .logoItem {
+        padding: 0 0.8rem;
+    }
+    
+    .logoItem img {
+        max-height: 25px;
+        max-width: 70px;
+    }
+    
+    /* .logoTrack {
+        animation-duration: 12s;
+    } */
+}

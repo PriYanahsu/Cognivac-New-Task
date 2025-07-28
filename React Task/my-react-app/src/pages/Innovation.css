@@ -1,0 +1,154 @@
+.innovation-section {
+  width: 100%;
+  padding: 4rem 0;
+
+}
+
+.innovation-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: start;
+}
+
+.innovation-content {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lead-text, .secondary-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .stat-item {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .innovation-section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .lead-text, .secondary-text {
+    font-size: 1rem;
+  }
+  
+  .stats-container {
+    gap: 1.5rem;
+  }
+  
+  .stat-item {
+    min-width: 150px;
+    padding: 1.2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .text-content{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-item {
+    width: 80%;
+    max-width: 250px;
+  }
+  
+  .innovation-container {
+    padding: 0 1.5rem;
+  }
+
+  .text-content{
+    display: contents;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .innovation-container {
+    padding: 0 1rem;
+  }
+  
+  .stat-item {
+    width: 100%;
+  }
+}
