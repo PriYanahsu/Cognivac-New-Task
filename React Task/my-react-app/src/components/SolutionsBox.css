@@ -1,0 +1,63 @@
+/* SolutionsBox.css */
+.solutions-box {
+    background: inherit;
+    border-top: 1px solid #C1C5BF;
+    padding-top: 40px;
+    height: 100%;
+}
+
+.solutions-box-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 25px;
+}
+
+.solutions-box-title {
+    font-size: 31px;
+    font-weight: 700;
+    color: (--Second-color);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.solutions-box-desc {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--third-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .solutions-box {
+        padding: 35px 25px;
+    }
+    
+    .solutions-box-title {
+        font-size: 31px;
+    }
+
+    .solutions-box-desc {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 799px) {
+    .solutions-box {
+        padding: 30px 20px;
+    }
+    
+    .solutions-box-img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .solutions-box-title {
+        font-size: 31px;
+        margin-bottom: 12px;
+    }
+    
+    .solutions-box-desc {
+        font-size: 20px;
+    }
+}

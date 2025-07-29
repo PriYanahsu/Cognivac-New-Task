@@ -1,15 +1,7 @@
-.innovation-section {
-  width: 100%;
-  max-width: 1440px;
-  padding: 4rem 0;
-  background-color: #fff;
-  border: 1px solid black;
-}
-
 .innovation-container {
   max-width: 1204px;
+  padding-top: 4rem;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .innovation-content {
@@ -21,14 +13,14 @@
 .section-subtitle {
   font-size: 1rem;
   font-weight: 600;
-  color: #55A938;
+  color: #2E5C1E;
   margin-bottom: 0.5rem;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--First-color);
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -37,50 +29,41 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* border: 1px solid black; */
 }
 
 .lead-text {
   width: 100%;
-  font-size: 24px;
-  font-weight: 400;
-  color: #51564E;
+  font-size: 1.6rem;;
+  font-weight: 300;
+  color: var(--Second-color);
 }
 
-
 .stats-container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 3rem 0;
 }
 
 .stat-item {
-  border: 1px solid black;
-  width: 15%;
-  min-width: 125px;
-  max-width: 212px;
+  /* border: 1px solid black; */
+  width: auto;
 }
 
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: (--Second-color);
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: #1a1a1a;
+  color: var(--third-color);
   margin-bottom: 0.25rem;
-}
-
-.stat-description {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #51564E;
 }
 
 .read-more {
@@ -93,8 +76,9 @@
 .read-more a {
   font-size: 1rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #3A7326;
   text-decoration: none;
+  border-bottom: 1px solid #3A7326;
 }
 
 /* Large desktop (1440px to 1200px) */
@@ -104,7 +88,7 @@
   }
   
   .lead-text {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .stats-container {

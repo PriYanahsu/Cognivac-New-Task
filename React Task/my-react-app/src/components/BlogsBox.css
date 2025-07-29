@@ -1,0 +1,66 @@
+/* BlogsBox.css - Individual blog card styles */
+.blog-box {
+    border-radius: 8px;
+    overflow: hidden;
+    background: inherit;
+    max-width: 372px;
+}
+
+.blog-box-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-box-content {
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.blog-box-category {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.blog-box-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--third-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive styles */
+@media (max-width: 1199px) and (min-width: 810px) {
+    .blog-box-content {
+        padding: 1rem;
+    }
+    
+    .blog-box-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 810px) {
+    .blog-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .blog-box-img {
+        height: 180px;
+    }
+    
+    .blog-box-category {
+        font-size: 0.8rem;
+    }
+    
+    .blog-box-title {
+        font-size: 1.1rem;
+    }
+}

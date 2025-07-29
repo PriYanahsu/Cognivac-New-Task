@@ -19,7 +19,7 @@ const Home = () => {
                         <h1>Unleash the Power of Data</h1>
                         <p className="subtitle">See into the future with our state-of-the-art AI solutions. Unleash the potential of machine learning to innovate, optimize, and transform your business processes.</p>
                         <div className="buttonGroup">
-                            <Button label="Start Your Free Trial" className="primary" />
+                            <Button label="Start Your Free Trial" variant="outlinex" className="primary" />
                             <Button label="Learn more" className="secondary" />
                         </div>
                     </div>

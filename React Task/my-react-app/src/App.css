@@ -3,9 +3,7 @@
     src: url("./assets/Fonts/DMSans-VariableFont_opsz,wght.ttf");
 }
 
-
-
-.App{
+.App {
     height: 100%;
     width: 100%;
     /* max-width: 1440px; */
@@ -16,4 +14,36 @@
     align-items: center;
     /* border: 1px solid black; */
     font-family: Myfont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+    --bg-light: #ffffff;
+    --text-light: #000000;
+
+
+    --bg-dark: #121212;
+    --text-dark: #A2A89E;
+}
+
+.light {
+    background-color: var(--bglight);
+    color: var(--text-light);
+
+    --First-color : #141513;
+    --Second-color : #282B27;
+    --third-color : #51564E;
+    --Analytics-bg-Color : #EFF0EF;
+}
+
+.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+
+    --First-color : #E0E3DD;
+    --Second-color : #A2A89E;
+    --third-color : #838B7F;
+    --Analytics-bg-Color : #121212;
 }

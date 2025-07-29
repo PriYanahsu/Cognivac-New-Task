@@ -8,6 +8,16 @@
   font-weight: 700;
 }
 
+.buttons2 {
+  padding: 3% 5%;
+  border: 1px solid #3A7326;
+  color: var(--Second-color);
+  background-color: inherit;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
 .buttons:hover {
   background-color: darkgreen;
 }

@@ -28,8 +28,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className="innerNavRight">
-            <Button label="Get a Demo" />
-            <Button label="Start your Free Trial" />
+            <Button label="Get a Demo"/>
+            <Button label="Start your Free Trial" variant="outlinex" />
           </div>
         </div>
       </div>

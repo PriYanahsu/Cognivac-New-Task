@@ -1,9 +1,9 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({ label }) => {
+const Button = ({ label, variant }) => {
   return (
-    <button className="buttons">
+    <button className={variant === 'outlinex' ? 'buttons' : 'buttons2'}>
       {label}
     </button>
   );

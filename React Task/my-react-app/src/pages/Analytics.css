@@ -1,0 +1,135 @@
+.Analytics {
+    width: 100%;
+    padding: 5rem 1rem;
+    background-color: var(--Analytics-bg-Color);
+    max-width: 1440px;
+}
+
+.AnalyticsInner {
+    max-width: 1204px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.First h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--First-color);
+}
+
+.First p {
+    font-size: 1rem;
+    color: var(--third-color);
+    margin-bottom: 1.5rem;
+}
+
+.Second {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.innerLine {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.innerLine img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.innerLine p {
+    margin: 0;
+    color: var(--third-color);
+}
+
+.image img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.AnalyticsInnerOne {
+    width: 100%;
+    padding: 1%;
+}
+
+.First h2 {
+    font-size: 1.75rem;
+}
+
+.Button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media (min-width: 800px) {
+    .AnalyticsInner {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .AnalyticsInnerOne:first-child {
+        width: 50%;
+        padding-right: 2rem;
+    }
+
+    .AnalyticsInnerOne:last-child {
+        width: 50%;
+    }
+
+    .First h2 {
+        font-size: 1.8rem;
+    }
+
+    .Button {
+        margin-top: 1.5rem;
+        width: auto;
+    }
+}
+
+/* Desktop styles (1200px and up) */
+@media (min-width: 1200px) {
+    .AnalyticsInner {
+        border: 1px solid black;
+        justify-content: space-between;
+    }
+
+    .AnalyticsInnerOne:first-child {
+        width: 45%;
+    }
+
+    .AnalyticsInnerOne:last-child {
+        width: 55%;
+    }
+
+    .First h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .First p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .Second {
+        gap: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .innerLine p {
+        font-size: 1.05rem;
+    }
+
+    .Button {
+        padding: 0.8rem 2rem;
+    }
+}

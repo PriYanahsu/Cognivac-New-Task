@@ -33,14 +33,14 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #333;
+    color: var(--First-color);
 }
 
 .homeLeft .subtitle {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #666;
+    color: var(--Second-color);
 }
 
 .buttonGroup {
@@ -52,14 +52,14 @@
     flex: 1;
     max-width: 50%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .imageFlexContainer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
 }
 
@@ -73,6 +73,7 @@
     aspect-ratio: 1/1;
     overflow: hidden;
     border-radius: 12px;
+    background-color: inherit;
 }
 
 .imageItem img {
@@ -82,11 +83,7 @@
     transition: transform 0.3s ease;
 }
 
-.imageItem:hover img {
-    transform: scale(1.05);
-}
-
-/* Responsive adjustments using only flex */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
     .homeContent {
         flex-direction: column;
@@ -99,49 +96,72 @@
     }
     
     .homeLeft {
-        align-items: start;
+        align-items: center;
+        text-align: center;
     }
     
     .imageFlexContainer {
-        max-width: 100%;
+        max-width: 50%;
+        justify-content: center;
+    }
+    
+    .buttonGroup {
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
     .homeLeft h1 {
-        font-size: 2rem;
-    }
-
-    .imageFlexContainer{
-        /* border: 1px solid black; */
-        height: auto;
-        max-width: 350px;
+        font-size: 2.5rem;
     }
     
     .homeLeft .subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
-    .buttonGroup {
-        flex-direction: column;
-        width: 100%;
+    .imageFlexContainer {
+        max-width: 60%;
+    }
+    
+    .imageRow {
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
+
+     .imageFlexContainer {
+        max-width: 100%;
+    }
     .homePage {
         padding: 1rem;
     }
     
     .homeLeft h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+    
+    .buttonGroup {
+        flex-direction: column;
+        align-items: center;
     }
     
     .imageRow {
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     
     .imageItem {
+        min-width: calc(33.333% - 0.5rem);
+    }
+    
+    /* Adjust for the empty first item in first row */
+    .imageRow:first-child .imageItem:first-child {
+        display: none;
+    }
+    
+    /* Make first row items take more space to compensate for missing item */
+    .imageRow:first-child .imageItem {
         min-width: calc(50% - 0.5rem);
     }
 }
