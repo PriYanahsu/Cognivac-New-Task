@@ -5,7 +5,7 @@ import FAQBox from '../components/FAQBox.jsx';
 const FAQ = () => {
   const faqItems = [
     {
-      question: "Can DataWise's AI solutions integrate with business systems?",
+      question: "Can DataWise's AI solutions be  business systems?",
       answer: "Yes, integration is a key strength of our AI solutions. DataWise's AI platform is designed for flexibility and can be integrated with a wide range of existing business systems."
     },
     {
