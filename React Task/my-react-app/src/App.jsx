@@ -6,6 +6,7 @@ import Innovation from './pages/Innovation.jsx';
 import Solutions from './pages/Solutions.jsx';
 import Blogs from './pages/Blogs.jsx';
 import Analytics from './pages/Analytics.jsx';
+import FAQ from './pages/FAQ.jsx';
 import './App.css';
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
       <Solutions />
       <Blogs />
       <Analytics />
+      <FAQ />
     </div>
   );
 };

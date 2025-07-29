@@ -1,7 +1,7 @@
 import React from 'react'
 import './Analytics.css'
-import Icon from '../assets/AnalyticsIcon.png';
-import Image from '../assets/AnanlyticsImage.png';
+import Icon from '../assets/Ananlytics/AnalyticsIcon.png';
+import Image from '../assets/Ananlytics/AnanlyticsImage.png';
 import Button from '../elements/button';
 
 const Analytics = () => {
