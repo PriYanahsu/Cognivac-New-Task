@@ -2,7 +2,7 @@
     width: 100%;
     padding: 4rem 1rem;
     background-color: var(--Analytics-bg-Color);
-    max-width: 1440px;
+    /* max-width: 1440px; */
     box-sizing: border-box;
 }
 

@@ -28,8 +28,8 @@ const Navbar = ({ isDarkMode }) => {
           </div>
         </div>
         <div className="innerNavRight">
-          <Button label="Get a Demo" />
-          <Button label="Start your Free Trial" variant="outlinex" />
+          <Button label="Get a demo" />
+          <Button label="Start your free trial" variant="outlinex" />
         </div>
       </div>
     </div>

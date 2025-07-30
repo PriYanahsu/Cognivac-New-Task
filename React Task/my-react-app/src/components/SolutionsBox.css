@@ -1,7 +1,7 @@
 /* SolutionsBox.css */
 .solutions-box {
     background: inherit;
-    border-top: 1px solid var(--third-color);
+    border-top: 1px solid var(--solution-border);
     padding-top: 40px;
     height: 100%;
 }

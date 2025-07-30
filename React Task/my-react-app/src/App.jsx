@@ -19,11 +19,25 @@ const App = () => {
 
   return (
     <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
-      <button onClick={toggleDarkMode}>
+      <button
+        onClick={toggleDarkMode}
+        style={{
+          position: 'fixed',
+          top: '20px',
+          right: '200px',
+          padding: '10px 20px',
+          backgroundColor: isDarkMode ? '#ffffff' : '#1e1e1e',
+          color: isDarkMode ? '#1e1e1e' : '#ffffff',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+        }}
+      >
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
 
-      <Navbar isDarkMode={isDarkMode}/>
+
+      <Navbar isDarkMode={isDarkMode} />
       <Home />
       <SecondNav />
       <Innovation />
@@ -31,7 +45,7 @@ const App = () => {
       <Blogs />
       <Analytics />
       <FAQ />
-      <Footer isDarkMode={isDarkMode}/>
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 };

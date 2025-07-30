@@ -36,6 +36,9 @@
     --Second-color : #282B27;
     --third-color : #51564E;
     --Analytics-bg-Color : #EFF0EF;
+
+    --button-border : #A6DC94;
+    --solution-border: #C1C5BF;
 }
 
 .dark {
@@ -46,4 +49,7 @@
     --Second-color : #A2A89E;
     --third-color : #838B7F;
     --Analytics-bg-Color : #121311;
+
+    --button-border : #0C1708;
+    --solution-border: #282B27;
 }

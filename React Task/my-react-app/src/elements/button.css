@@ -1,5 +1,5 @@
 .buttons {
-  padding: 3% 5%;
+  padding: 3% 7%;
   border: none;
   background-color: #3A7326;
   color: #FFFFFF;
@@ -9,15 +9,15 @@
 }
 
 .buttons2 {
-  padding: 3% 5%;
-  border: 1px solid #3A7326;
-  color: var(--Second-color);
+  padding: 3% 8%;
+  border: 1px solid var(--button-border);
+  color: #3A7326;
   background-color: inherit;
   font-size: 14px;
   border-radius: 10px;
   font-weight: 700;
 }
 
-.buttons:hover {
+/* .buttons:hover {
   background-color: darkgreen;
-}
+} */

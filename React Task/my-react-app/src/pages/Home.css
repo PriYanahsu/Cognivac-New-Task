@@ -82,11 +82,12 @@
     object-fit: cover;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
     .homeContent {
         flex-direction: column;
         gap: 3rem;
+        /* border: 1px solid black; */
+        padding: 2%;
     }
     
     .homeLeft, .homeRight {
@@ -102,6 +103,16 @@
     .imageFlexContainer {
         max-width: 50%;
         justify-content: center;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .buttonGroup button{
+        width: 100%;
     }
     
 }

@@ -10,6 +10,7 @@
     height: 200px;
     object-fit: cover;
     display: block;
+    border-radius: 5%;
 }
 
 .blog-box-content {
@@ -23,7 +24,6 @@
     font-weight: 400;
     color: #555;
     margin-bottom: 1rem;
-    text-transform: uppercase;
 }
 
 .blog-box-title {
@@ -34,7 +34,6 @@
     line-height: 1.4;
 }
 
-/* Responsive styles */
 @media (max-width: 1199px) and (min-width: 810px) {
     .blog-box-content {
         padding: 1rem;
@@ -49,6 +48,7 @@
     .blog-box {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     
     .blog-box-img {

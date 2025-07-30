@@ -46,6 +46,7 @@
     .solutionsLower {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+        padding: 3%;
     }
 }
 
@@ -68,6 +69,6 @@
     .solutionsLower {
         grid-template-columns: 1fr;
         gap: 25px;
-        padding: 0 15px;
+        padding: 3%;
     }
 }

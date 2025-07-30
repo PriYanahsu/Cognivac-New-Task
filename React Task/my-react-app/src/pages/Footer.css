@@ -113,6 +113,11 @@
 
 @media (max-width: 800px) {
 
+    .Footer {
+        /* border: 1px solid black; */
+        padding: 3%;
+    }
+
     .FooterInnerRight{
         flex-wrap: nowrap;
     }
