@@ -3,7 +3,6 @@
     padding: 4rem 0;
     max-width: 1204px;
     margin: 0 auto;
-    /* border: 1px solid black; */
 }
 
 .blogs-header {
@@ -68,7 +67,6 @@
 
 @media (max-width: 810px) {
     .blogs-section {
-        padding: 2rem 1rem;
         /* border: 1px solid black; */
         display: flex;
         flex-direction: column;

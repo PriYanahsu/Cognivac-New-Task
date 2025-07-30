@@ -1,7 +1,7 @@
 /* SolutionsBox.css */
 .solutions-box {
     background: inherit;
-    border-top: 1px solid #C1C5BF;
+    border-top: 1px solid var(--third-color);
     padding-top: 40px;
     height: 100%;
 }
@@ -15,7 +15,7 @@
 .solutions-box-title {
     font-size: 31px;
     font-weight: 700;
-    color: (--Second-color);
+    color: var(--Second-color);
     margin-bottom: 15px;
     line-height: 1.3;
 }

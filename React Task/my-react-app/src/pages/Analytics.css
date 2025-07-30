@@ -1,8 +1,9 @@
 .Analytics {
     width: 100%;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
     background-color: var(--Analytics-bg-Color);
     max-width: 1440px;
+    box-sizing: border-box;
 }
 
 .AnalyticsInner {
@@ -14,15 +15,28 @@
     gap: 2rem;
 }
 
+.AnalyticsInnerOne {
+    width: 100%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.AnalyticsInnerSecond {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+}
+
 .First h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--First-color);
 }
 
 .First p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: var(--third-color);
     margin-bottom: 1.5rem;
 }
@@ -44,80 +58,105 @@
     width: 20px;
     height: 20px;
     margin-top: 2px;
+    flex-shrink: 0;
 }
 
 .innerLine p {
     margin: 0;
     color: var(--third-color);
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
 }
 
-.image img {
-    width: 80%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.AnalyticsInnerOne {
+.image2{
     width: 100%;
-    padding: 1%;
 }
 
-.First h2 {
-    font-size: 1.75rem;
+.image2 img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    /* border: 1px solid black; */
 }
 
 .Button {
     width: 100%;
     margin-top: 1rem;
+    /* padding: 0.75rem 1.25rem; */
+    /* font-size: 1rem;          ////// */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .Button {
+        /* width: auto; */
+        margin-top: 1.2rem;
+    }
+
+    .AnalyticsInner {
+        padding: 0 1rem;
+    }
 }
 
 @media (min-width: 800px) {
     .AnalyticsInner {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        gap: 2rem;
     }
 
-    .AnalyticsInnerOne:first-child {
-        width: 50%;
+    .AnalyticsInnerOne {
+        width: 100%;
         padding-right: 2rem;
     }
 
-    .AnalyticsInnerOne:last-child {
-        width: 50%;
+    .AnalyticsInnerSecond {
+        width: 100%;
+        height: auto;
     }
 
-    .First h2 {
-        font-size: 1.8rem;
+    .AnalyticsInnerSecond .image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .image2 img {
+        height: 100%;
+        width: 100%;
     }
 
     .Button {
         margin-top: 1.5rem;
-        width: auto;
     }
 }
 
 @media (min-width: 1200px) {
     .AnalyticsInner {
-        /* border: 1px solid black; */
+        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
+        gap: 2rem;
     }
 
-    .AnalyticsInnerOne:first-child {
+    .AnalyticsInnerOne {
         width: 45%;
     }
 
-    .AnalyticsInnerOne:last-child {
-        width: 55%;
+    .AnalyticsInnerSecond {
+        width: 50%;
+        /* border: 1px solid black; */
+    }
+
+    .AnalyticsInnerSecond .image2{
+        width: 80%;
     }
 
     .First h2 {
-        font-size: 2.5rem;
         margin-bottom: 1.5rem;
     }
 
     .First p {
-        font-size: 1.1rem;
         margin-bottom: 2rem;
     }
 
@@ -126,11 +165,7 @@
         margin-bottom: 2.5rem;
     }
 
-    .innerLine p {
-        font-size: 1.05rem;
-    }
-
-    .Button {
+    /* .Button {
         padding: 0.8rem 2rem;
-    }
+    } */
 }

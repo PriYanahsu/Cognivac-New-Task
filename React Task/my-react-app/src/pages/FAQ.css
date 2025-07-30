@@ -46,9 +46,9 @@
 
 .faq-grid {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.8rem;
   /* border: 1px solid black; */
 }

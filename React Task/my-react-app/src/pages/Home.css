@@ -68,11 +68,11 @@
     gap: 0.5rem;
 }
 
-.imageItem {
+.imageRow .imageItem {
     flex: 1;
     aspect-ratio: 1/1;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 30px;
     background-color: inherit;
 }
 
@@ -122,6 +122,16 @@
     .imageRow {
         justify-content: center;
     }
+
+    .buttonGroup {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .buttonGroup button{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -148,21 +158,11 @@
     }
     
     .imageRow {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-between;
     }
     
     .imageItem {
         min-width: calc(33.333% - 0.5rem);
-    }
-    
-    /* Adjust for the empty first item in first row */
-    .imageRow:first-child .imageItem:first-child {
-        display: none;
-    }
-    
-    /* Make first row items take more space to compensate for missing item */
-    .imageRow:first-child .imageItem {
-        min-width: calc(50% - 0.5rem);
     }
 }

@@ -7,6 +7,7 @@ import Solutions from './pages/Solutions.jsx';
 import Blogs from './pages/Blogs.jsx';
 import Analytics from './pages/Analytics.jsx';
 import FAQ from './pages/FAQ.jsx';
+import Footer from './pages/Footer.jsx';
 import './App.css';
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
 
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode}/>
       <Home />
       <SecondNav />
       <Innovation />
@@ -30,6 +31,7 @@ const App = () => {
       <Blogs />
       <Analytics />
       <FAQ />
+      <Footer isDarkMode={isDarkMode}/>
     </div>
   );
 };

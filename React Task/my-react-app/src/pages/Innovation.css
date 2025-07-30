@@ -81,7 +81,6 @@
   border-bottom: 1px solid #3A7326;
 }
 
-/* Large desktop (1440px to 1200px) */
 @media (min-width: 1200px) {
   .innovation-container {
     max-width: 1204px;
@@ -96,11 +95,10 @@
   }
 }
 
-/* Medium desktop (1199px to 810px) */
 @media (max-width: 1199px) and (min-width: 810px) {
-  .text-content {
+  /* .text-content {
     display: none;
-  }
+  } */
   
   .stats-container {
     margin-top: 1rem;
@@ -116,7 +114,6 @@
   }
 }
 
-/* Mobile (below 810px) */
 @media (max-width: 810px) {
   .innovation-section {
     padding: 2rem 0;
