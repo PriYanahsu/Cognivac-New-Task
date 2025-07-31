@@ -22,9 +22,9 @@ const App = () => {
       <button
         onClick={toggleDarkMode}
         style={{
-          position: 'fixed',
-          top: '20px',
-          right: '200px',
+          position: 'relative',
+          top: '0px',
+          right: '0px',
           padding: '10px 20px',
           backgroundColor: isDarkMode ? '#ffffff' : '#1e1e1e',
           color: isDarkMode ? '#1e1e1e' : '#ffffff',
