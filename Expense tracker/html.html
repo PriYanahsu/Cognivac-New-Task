@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { display: flex; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 10px; }
+        .add-expense, .expense-list, .filters, .summary { padding: 15px; }
+        .input-group { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .input-group input, .input-group select { padding: 5px; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: #1e90ff; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+        .delete { color: #ff0000; text-decoration: underline; cursor: pointer; }
+        .summary div { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="card header">
+                <img src="https://via.placeholder.com/30" alt="Expense Icon"> Expense Tracker
+            </div>
+            <div class="card add-expense">
+                <div class="input-group">
+                    <span>📝</span><input type="text" id="description" placeholder="Description" value="Lunch at KFC">
+                </div>
+                <div class="input-group">
+                    <span>💰</span><input type="number" id="amount" placeholder="Amount" value="300">
+                </div>
+                <div class="input-group">
+                    <span>📅</span><input type="date" id="date" value="2025-07-30">
+                </div>
+                <div class="input-group">
+                    <span>🇮🇳</span><select id="category"><option value="Food">Food</option><option value="Travel">Travel</option></select>
+                </div>
+                <button onclick="addExpense()">Add Expense</button>
+            </div>
+            <div class="card expense-list">
+                <h3>Expense List</h3>
+                <div id="expenseItems">
+                    <div>Lunch at KFC - ₹300 - Food - 07/30/2025 <span class="delete" onclick="deleteExpense(this)">Delete</span></div>
+                    <div>Uber Ride - ₹150 - Travel - 07/29/2025 <span class="delete" onclick="deleteExpense(this)">Delete</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="card filters">
+                <h3>Filters</h3>
+                <div><select id="filterCategory"><option value="All">All</option><option value="Food">Food</option><option value="Travel">Travel</option></select></div>
+                <div><input type="date" id="filterFromDate"></div>
+                <div><input type="date" id="filterToDate"></div>
+            </div>
+            <div class="card summary">
+                <h3>Summary</h3>
+                <div>Total: ₹450</div>
+                <div>Food: ₹300</div>
+                <div>Travel: ₹150</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let expenses = [
+            { desc: "Lunch at KFC", amount: 300, category: "Food", date: "2025-07-30" },
+            { desc: "Uber Ride", amount: 150, category: "Travel", date: "2025-07-29" }
+        ];
+
+        function addExpense() {
+            const desc = document.getElementById("description").value;
+            const amount = parseFloat(document.getElementById("amount").value);
+            const date = document.getElementById("date").value;
+            const category = document.getElementById("category").value;
+
+            if (desc && amount > 0 && category) {
+                expenses.push({ desc, amount, category, date });
+                updateUI();
+                saveExpenses();
+            }
+        }
+
+        function deleteExpense(element) {
+            const item = element.parentElement;
+            const desc = item.textContent.split(" - ")[0];
+            expenses = expenses.filter(e => e.desc !== desc);
+            updateUI();
+            saveExpenses();
+        }
+
+        function updateUI() {
+            const expenseItems = document.getElementById("expenseItems");
+            expenseItems.innerHTML = expenses.map(e => `<div>${e.desc} - ₹${e.amount} - ${e.category} - ${new Date(e.date).toLocaleDateString('en-US')} <span class="delete" onclick="deleteExpense(this)">Delete</span></div>`).join('');
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const summary = document.querySelector(".summary");
+            const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+            const byCategory = expenses.reduce((acc, e) => {
+                acc[e.category] = (acc[e.category] || 0) + e.amount;
+                return acc;
+            }, {});
+            summary.innerHTML = `<h3>Summary</h3><div>Total: ₹${total}</div>`;
+            for (let cat in byCategory) {
+                summary.innerHTML += `<div>${cat}: ₹${byCategory[cat]}</div>`;
+            }
+        }
+
+        function saveExpenses() {
+            localStorage.setItem("expenses", JSON.stringify(expenses));
+        }
+
+        function loadExpenses() {
+            const saved = localStorage.getItem("expenses");
+            if (saved) expenses = JSON.parse(saved);
+            updateUI();
+        }
+
+        window.onload = loadExpenses;
+    </script>
+</body>
+</html>
