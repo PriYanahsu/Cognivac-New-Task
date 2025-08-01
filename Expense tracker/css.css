@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.req{
+    display: none;
+}
+
+input:invalid + .req{
+        display: inline;
+        color: red;
+    }
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.add-expense,
+.expense-list,
+.filters,
+.summary {
+    padding: 15px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-layGroup{
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.delete {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.summary div {
+    margin-bottom: 10px;
+} 
+
+
+
+
