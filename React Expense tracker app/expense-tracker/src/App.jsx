@@ -9,10 +9,28 @@ function App() {
   const [allExpenses, setAllExpenses] = useState([]);
   const [filteredExpenses, setFilteredExpenses] = useState([]);
 
+  const handleUpdate = (index) => {
+    const updatedExpense = prompt("Enter new expense details (text, date, category, amount) separated by commas:");
+    if (updatedExpense) {
+      const [text, date, category, amount] = updatedExpense.split(',');
+      const updatedExpenses = allExpenses.map((expense, i) => 
+        i === index ? { ...expense, text, date, category, amount: parseFloat(amount) } : expense
+    );
+      setAllExpenses(updatedExpenses);
+      setFilteredExpenses(updatedExpenses);
+  };
+};
+
+  const handleDelete = (index) => {
+    const updatedExpenses = allExpenses.filter((_, i) => i !== index);
+    setAllExpenses(updatedExpenses);
+    setFilteredExpenses(updatedExpenses);
+  };
+
   const handleNewExpense = (newExpense) => {
     const updatedExpenses = [...allExpenses, newExpense];
     setAllExpenses(updatedExpenses);
-    setFilteredExpenses(updatedExpenses); 
+    setFilteredExpenses(updatedExpenses);
   };
 
   return (
@@ -21,11 +39,11 @@ function App() {
       <div className="expenseTracker">
         <div className="left">
           <Input onSubmitExpense={handleNewExpense} />
-          <ExpenseList expenses={filteredExpenses} />
+          <ExpenseList expenses={filteredExpenses} deleteCurr={handleDelete} upDateValue={handleUpdate}/>
         </div>
         <div className="right">
           <Filter expenses={allExpenses} onFilter={setFilteredExpenses} />
-          <Summary expenses={filteredExpenses}/>
+          <Summary expenses={filteredExpenses} />
         </div>
       </div>
     </>

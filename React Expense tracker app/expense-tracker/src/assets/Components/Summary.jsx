@@ -8,6 +8,14 @@ const Summary = ({ expenses }) => {
     total = expenses.reduce((acc, expense) => acc + expense.amount, 0);
   }
 
+  let totalCategory = {};
+  if(expenses && expenses.length > 0) {
+    expenses.forEach(element => {
+      if(totalCategory[element.category]) totalCategory[element.category] += element.amount;
+      else totalCategory[element.category] = element.amount;
+    });
+  }
+
   return (
     <div className='summary'>
       <h3>Summary</h3>
@@ -16,10 +24,9 @@ const Summary = ({ expenses }) => {
           <p>Total : {total}</p>) :
           <p>No expense found</p>
         }
-        {expenses.length > 0 ? (
-          expenses.map((expense, index) => (
-            <p key={index}> {expense.category} : {expense.amount} </p>)
-          )) : null}
+        {Object.entries(totalCategory).map(([category, amount], index) => (
+          <p key={index}>{category} : Rs {amount}</p>
+        ))}
       </div>
     </div>
   )

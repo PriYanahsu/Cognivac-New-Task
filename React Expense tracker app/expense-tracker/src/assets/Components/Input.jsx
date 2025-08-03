@@ -30,7 +30,7 @@ const Input = ({ onSubmitExpense }) => {
     };
 
     return (
-        <div>
+        <div className='inputContainer'>
             <h3>Add Expense here!</h3>
             <div className="text">
                 <input

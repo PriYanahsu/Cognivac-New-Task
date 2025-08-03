@@ -1,7 +1,7 @@
 import React from 'react';
 import './ExpenseList.css';
 
-const ExpenseList = ({ expenses }) => {
+const ExpenseList = ({ expenses, deleteCurr, upDateValue }) => {
 
     console.log(expenses);
     return (
@@ -10,16 +10,17 @@ const ExpenseList = ({ expenses }) => {
             {expenses && expenses.length === 0 ? (
                 <p>No expenses found</p>
             ) : (
-                <>
-                    <p>Expense Data</p>
+                <div className="expenseListHeader">
                     <ul className="expenseList">
                         {expenses.map((expense, index) => (
                             <li key={index}>
-                                {index + 1} - {expense.text} - {expense.date} - {expense.category} - ₹{expense.amount}
+                                {index+1} - {expense.text} - {expense.date} - {expense.category} - ₹{expense.amount} -  
+                                <button className='button' onClick={() => deleteCurr(index)}>Delete</button>
+                                <button className='button' onClick={() => upDateValue(index)}>UpDate</button>
                             </li>
                         ))}
                     </ul>
-                </>
+                </div>
             )}
         </div>
     );
