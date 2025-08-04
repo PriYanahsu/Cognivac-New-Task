@@ -69,8 +69,8 @@ const ExpenseList = ({ expenses, deleteCurr, upDateValue }) => {
                                     </>
                                 ) : (
                                     <>
-                                        {index + 1} - {expense.text} - {expense.date} - {expense.category} - Rs{expense.amount}
-                                        <button className='button' onClick={() => deleteCurr(index)}>Delete</button>
+                                        {index+1} - {expense.text} - {expense.date} - {expense.category} - Rs{expense.amount}
+                                        <button className='button' onClick={() => deleteCurr(expense.id)}>Delete</button>
                                         <button className='button' onClick={() => handleEditClick(index)}>Edit</button>
                                     </>
                                 )}

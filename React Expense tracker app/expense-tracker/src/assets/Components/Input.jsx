@@ -4,7 +4,7 @@ import './Input.css';
 const Input = ({ onSubmitExpense }) => {
     const [message, setMessage] = useState(false);
     const [FormData, setFormData] = useState({
-        id: Date.now(),
+        id: '', 
         text: '',
         date: '',
         category: '',
@@ -14,6 +14,7 @@ const Input = ({ onSubmitExpense }) => {
     const TriggerValue = (e) => {
         setFormData({
             ...FormData,
+            id: Date.now(), 
             [e.target.name]: e.target.value
         });
     };

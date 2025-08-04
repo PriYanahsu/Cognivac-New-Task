@@ -28,7 +28,7 @@ function App() {
 
   const handleDelete = (index) => {
     const updatedExpense = ((prevExpenses) =>
-      prevExpenses.filter((_, i) => i!== index)
+      prevExpenses.filter((curr) => curr.id!== index)
     );
     setAllExpenses(updatedExpense);
     setFilteredExpenses(updatedExpense);
