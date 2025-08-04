@@ -1,8 +1,23 @@
 .inputContainer{
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: left;
     gap: 10px;
     padding: 20px;
+}
+
+.inputContainer input {
+    height: 25px;
+    width: 70%;
+}
+
+.inputContainer button{
+    width: 70%;
+}
+
+.message{
+    font-size: 12px;
+    color: red;
+    margin-left: 10px;
 }

@@ -5,6 +5,7 @@ const Summary = ({ expenses }) => {
 
   let total = 0;
   if (expenses && expenses.length > 0) {
+    console.log(expenses);
     total = expenses.reduce((acc, expense) => acc + expense.amount, 0);
   }
 

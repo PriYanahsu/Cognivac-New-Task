@@ -9,23 +9,31 @@ function App() {
   const [allExpenses, setAllExpenses] = useState([]);
   const [filteredExpenses, setFilteredExpenses] = useState([]);
 
-  const handleUpdate = (index) => {
-    const updatedExpense = prompt("Enter new expense details (text, date, category, amount) separated by commas:");
-    if (updatedExpense) {
-      const [text, date, category, amount] = updatedExpense.split(',');
-      const updatedExpenses = allExpenses.map((expense, i) => 
-        i === index ? { ...expense, text, date, category, amount: parseFloat(amount) } : expense
-    );
-      setAllExpenses(updatedExpenses);
-      setFilteredExpenses(updatedExpenses);
+
+  const upDateValue = (filteredIndex, updatedExpense) => {
+    const matchedExpense = filteredExpenses[filteredIndex];
+    const realIndex = allExpenses.findIndex(exp => exp === matchedExpense);
+
+    if (realIndex !== -1) {
+      const updatedAll = [...allExpenses];
+      updatedAll[realIndex] = updatedExpense;
+      setAllExpenses(updatedAll);
+
+      const updatedFiltered = [...filteredExpenses];
+      updatedFiltered[filteredIndex] = updatedExpense;
+      setFilteredExpenses(updatedFiltered);
+    }
   };
-};
+
 
   const handleDelete = (index) => {
-    const updatedExpenses = allExpenses.filter((_, i) => i !== index);
-    setAllExpenses(updatedExpenses);
-    setFilteredExpenses(updatedExpenses);
+    const updatedExpense = ((prevExpenses) =>
+      prevExpenses.filter((_, i) => i!== index)
+    );
+    setAllExpenses(updatedExpense);
+    setFilteredExpenses(updatedExpense);
   };
+
 
   const handleNewExpense = (newExpense) => {
     const updatedExpenses = [...allExpenses, newExpense];
@@ -33,13 +41,14 @@ function App() {
     setFilteredExpenses(updatedExpenses);
   };
 
+
   return (
     <>
       <h2>Expense Tracker</h2>
       <div className="expenseTracker">
         <div className="left">
           <Input onSubmitExpense={handleNewExpense} />
-          <ExpenseList expenses={filteredExpenses} deleteCurr={handleDelete} upDateValue={handleUpdate}/>
+          <ExpenseList expenses={filteredExpenses} deleteCurr={handleDelete} upDateValue={upDateValue} />
         </div>
         <div className="right">
           <Filter expenses={allExpenses} onFilter={setFilteredExpenses} />

@@ -8,7 +8,7 @@ const Input = ({ onSubmitExpense }) => {
         text: '',
         date: '',
         category: '',
-        amount : ''
+        amount: ''
     });
 
     const TriggerValue = (e) => {
@@ -24,7 +24,7 @@ const Input = ({ onSubmitExpense }) => {
             return;
         }
 
-        onSubmitExpense({...FormData, amount : parseFloat(FormData.amount)});
+        onSubmitExpense({ ...FormData, amount: parseFloat(FormData.amount) });
         setMessage(false);
         setFormData({ text: '', date: '', category: '', amount: '' });
     };
@@ -41,7 +41,7 @@ const Input = ({ onSubmitExpense }) => {
                     onChange={TriggerValue}
                     placeholder="Lunch at KFC"
                 />
-                {message && !FormData.text && <span className="message">required</span>}
+                {message && !FormData.text && <span className="message">Expense text required</span>}
             </div>
             <div className="date">
                 <input
@@ -51,7 +51,7 @@ const Input = ({ onSubmitExpense }) => {
                     value={FormData.date}
                     onChange={TriggerValue}
                 />
-                {message && !FormData.date && <span className="message">required</span>}
+                {message && !FormData.date && <span className="message">Date required</span>}
             </div>
             <div className="category">
                 <select
@@ -60,22 +60,39 @@ const Input = ({ onSubmitExpense }) => {
                     value={FormData.category}
                     className="input"
                 >
-                    <option value="">Select category</option>
+                    <option value=""> --select category-- </option>
                     <option value="food">Food</option>
                     <option value="games">Games</option>
+                    <option value="travel">Travel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="bills">Bills</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="education">Education</option>
+                    <option value="health">Health</option>
+                    <option value="transport">Transport</option>
+                    <option value="subscriptions">Subscriptions</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="rent">Rent</option>
+                    <option value="gift">Gift</option>
                 </select>
-                {message && !FormData.category && <span className="message">required</span>}
+                {message && !FormData.category && <span className="message">Category required</span>}
             </div>
             <div className="amount">
-                <input type="number"
+                <input
+                    type="number"
                     name="amount"
                     value={FormData.amount}
                     onChange={TriggerValue}
                     className="input"
                     placeholder="Amount in ₹"
                     min="1"
-                 />
-                {message && !FormData.amount && <span className="message">required</span>}
+                    onKeyPress={(e) => {
+                        if (e.key === '-' || e.key === '+') {
+                            e.preventDefault();
+                        }
+                    }}
+                />
+                {message && !FormData.amount && <span className="message">Amount required</span>}
             </div>
             <button type="button" id="button" onClick={addValue}>
                 Add Expense

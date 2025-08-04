@@ -4,10 +4,30 @@
     flex-direction: column;
     align-items: left;
     padding: 20px;
+    /* border: 1px solid black; */
 }
 
 .expenseListHeader{
-    width: 90%;
+    width: 80%;
     padding: 20px;
     border-radius: 5px;
+    text-align: left;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.expenseList{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+}
+
+
+.expenseList li input{
+    width: 120px;
 }

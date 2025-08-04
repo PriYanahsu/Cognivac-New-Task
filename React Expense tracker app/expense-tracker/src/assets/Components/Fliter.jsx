@@ -20,6 +20,16 @@ const Filter = ({ expenses, onFilter }) => {
         applyFilters(updatedFilters);
     };
 
+    const ClearFilter = () => {
+        const clearedFilters = {
+            category: '',
+            fromDate: '',
+            toDate: ''
+        };
+        setFilters(clearedFilters);
+        applyFilters(clearedFilters);
+    };
+
     const applyFilters = ({ category, fromDate, toDate }) => {
         let filtered = [...expenses];
 
@@ -43,9 +53,20 @@ const Filter = ({ expenses, onFilter }) => {
             <h3>Filter</h3>
             <div className="containers">
                 <select name="category" value={filters.category} onChange={handleChange}>
-                    <option value="">-- Select Category --</option>
+                    <option value="">-- All --</option>
                     <option value="food">Food</option>
                     <option value="games">Games</option>
+                    <option value="travel">Travel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="bills">Bills</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="education">Education</option>
+                    <option value="health">Health</option>
+                    <option value="transport">Transport</option>
+                    <option value="subscriptions">Subscriptions</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="rent">Rent</option>
+                    <option value="gift">Gift</option>
                 </select>
 
                 <input
@@ -61,6 +82,8 @@ const Filter = ({ expenses, onFilter }) => {
                     value={filters.toDate}
                     onChange={handleChange}
                 />
+
+                <button className='clear' onClick={() => ClearFilter()}>Clear filter</button>
             </div>
         </div>
     );
