@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
+const DeshBoardTwo = ({isParentCheckedFullAll, isParentCheckedViewAll}) => {
     const [modules, setModules] = useState([
         {
             name: 'Permissions',
@@ -13,46 +13,44 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
     ]);
 
     useEffect(() => {
-        setModules(prev =>
-            prev.map(parent => ({
-                ...parent,
-                children: parent.children.map(child => ({
-                    ...child,
-                    full: isParentCheckedFullAll,
-                    create: isParentCheckedFullAll,
-                    update: isParentCheckedFullAll,
-                    delete: isParentCheckedFullAll,
-                    viewOnly: false,
+            setModules(prev =>
+                prev.map(parent => ({
+                    ...parent,
+                    children: parent.children.map(child => ({
+                        ...child,
+                        full: isParentCheckedFullAll,
+                        create: isParentCheckedFullAll,
+                        update: isParentCheckedFullAll,
+                        delete: isParentCheckedFullAll,
+                        viewOnly: false,
+                    }))
                 }))
-            }))
-        );
-    }, [isParentCheckedFullAll]);
-
-    useEffect(() => {
-        setModules(prev =>
-            prev.map(parent => ({
-                ...parent,
-                children: parent.children.map(child => ({
-                    ...child,
-                    viewOnly: isParentCheckedViewAll,
-                    full: false,
-                    create: false,
-                    update: false,
-                    delete: false,
+            );
+        }, [isParentCheckedFullAll]);
+    
+        useEffect(() => {
+            setModules(prev =>
+                prev.map(parent => ({
+                    ...parent,
+                    children: parent.children.map(child => ({
+                        ...child,
+                        viewOnly: isParentCheckedViewAll,
+                        full: false,
+                        create: false,
+                        update: false,
+                        delete: false,
+                    }))
                 }))
-            }))
-        );
-    }, [isParentCheckedViewAll]);
+            );
+        }, [isParentCheckedViewAll]);
 
     const isFullAllChecked = modules.every(module =>
-        module.children.every(child =>
-            child.full && child.create && child.update && child.delete
+        module.children.every(child => child.full && child.create && child.update && child.delete && !child.viewOnly
         )
-    );    
+    );
 
     const isViewOnlyAllChecked = modules.every(module =>
-        module.children.every(child =>
-            child.viewOnly && !child.full && !child.create && !child.update && !child.delete
+        module.children.every(child => child.viewOnly && !child.full && !child.create && !child.update && !child.delete
         )
     );
 
@@ -106,7 +104,6 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
         } else {
             child[key] = newValue;
             if (newValue) child.viewOnly = false;
-
             const allSet = child.create && child.update && child.delete;
             child.full = allSet;
         }
@@ -117,25 +114,19 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
 
     return (
         <div style={{ padding: 20 }}>
-            <h2>Permissions Dashboard</h2>
+            <h2>Permissions Dashboard11</h2>
 
             <div style={{ marginBottom: 10 }}>
                 <label>
-                    <input
-                        type="checkbox"
+                    <input type="checkbox"
                         checked={isFullAllChecked}
-                        onChange={(e) => handleParentToggle('full', e.target.checked)}
-                    />{' '}
-                    Full All
+                        onChange={(e) => handleParentToggle('full', e.target.checked)} /> Full All
                 </label>
-                {' '}
+                {'    '}
                 <label>
-                    <input
-                        type="checkbox"
+                    <input type="checkbox"
                         checked={isViewOnlyAllChecked}
-                        onChange={(e) => handleParentToggle('viewOnly', e.target.checked)}
-                    />{' '}
-                    View Only All
+                        onChange={(e) => handleParentToggle('viewOnly', e.target.checked)} /> View Only All
                 </label>
             </div>
 
@@ -173,4 +164,4 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
     );
 };
 
-export default DeshBoard;
+export default DeshBoardTwo;
