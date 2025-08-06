@@ -14,18 +14,27 @@ const App = () => {
   const isParentCheckedFullAll = isFullAllOneChecked && isFullAllTwoChecked;
   const isParentCheckedViewAll = isViewOnlyAllOneChecked && isViewOnlyAllTwoChecked;
 
+  const fullOneChecked = (checked) => setFullAllOneChecked(checked);
+  const viewAllOneChecked = (checked) => setViewOnlyAllOneChecked(checked);
+  console.log(isParentCheckedFullAll, '............................ app');
+
+  const fullTwoChecked = (checked) => setFullAllTwoChecked(checked);
+  const viewAllTwoChecked = (checked) => setViewOnlyAllTwoChecked(checked);
+
+
+
   const CheckedValue = (name, checked) => {
-    if (name === 'Full-All') {
-      setFullAllOneChecked(checked);
-      setFullAllTwoChecked(checked);
-      if(isViewOnlyAllTwoChecked) setViewOnlyAllOneChecked(false);
-      if(isViewOnlyAllTwoChecked)setViewOnlyAllTwoChecked(false);
-    }
-    else if (name === 'ViewOnly-All') {
+    if (name === 'ViewOnly-All') {
       setViewOnlyAllOneChecked(checked);
       setViewOnlyAllTwoChecked(checked);
-      if(isFullAllOneChecked) setFullAllOneChecked(false);
-      if(isFullAllTwoChecked) setFullAllTwoChecked(false);
+      if (isFullAllOneChecked) setFullAllOneChecked(false);
+      if (isFullAllTwoChecked) setFullAllTwoChecked(false);
+    }
+    else if (name === 'Full-All') {
+      setFullAllOneChecked(checked);
+      setFullAllTwoChecked(checked);
+      if (isViewOnlyAllTwoChecked) setViewOnlyAllOneChecked(false);
+      if (isViewOnlyAllTwoChecked) setViewOnlyAllTwoChecked(false);
     }
   }
 
@@ -51,12 +60,18 @@ const App = () => {
       <div>
         <DeshBoard
           isParentCheckedFullAll={isParentCheckedFullAll}
-          isParentCheckedViewAll={isParentCheckedViewAll} 
-          />
+          isParentCheckedViewAll={isParentCheckedViewAll}
+
+          fullOneChecked={fullOneChecked}
+          viewAllOneChecked={viewAllOneChecked}
+        />
         <DeshBoardTwo
           isParentCheckedFullAll={isParentCheckedFullAll}
-          isParentCheckedViewAll={isParentCheckedViewAll} 
-          />
+          isParentCheckedViewAll={isParentCheckedViewAll}
+
+          fullTwoChecked={fullTwoChecked}
+          viewAllTwoChecked={viewAllTwoChecked}
+        />
       </div>
     </>
   )

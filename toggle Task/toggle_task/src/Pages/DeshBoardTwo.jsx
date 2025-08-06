@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DeshBoardTwo = ({isParentCheckedFullAll, isParentCheckedViewAll}) => {
+const DeshBoardTwo = ({ isParentCheckedFullAll, isParentCheckedViewAll, fullTwoChecked, viewAllTwoChecked }) => {
     const [modules, setModules] = useState([
         {
             name: 'Permissions',
@@ -13,46 +13,53 @@ const DeshBoardTwo = ({isParentCheckedFullAll, isParentCheckedViewAll}) => {
     ]);
 
     useEffect(() => {
-            setModules(prev =>
-                prev.map(parent => ({
-                    ...parent,
-                    children: parent.children.map(child => ({
-                        ...child,
-                        full: isParentCheckedFullAll,
-                        create: isParentCheckedFullAll,
-                        update: isParentCheckedFullAll,
-                        delete: isParentCheckedFullAll,
-                        viewOnly: false,
-                    }))
+        setModules(prev =>
+            prev.map(parent => ({
+                ...parent,
+                children: parent.children.map(child => ({
+                    ...child,
+                    full: isParentCheckedFullAll,
+                    create: isParentCheckedFullAll,
+                    update: isParentCheckedFullAll,
+                    delete: isParentCheckedFullAll,
+                    viewOnly: false,
                 }))
-            );
-        }, [isParentCheckedFullAll]);
-    
-        useEffect(() => {
-            setModules(prev =>
-                prev.map(parent => ({
-                    ...parent,
-                    children: parent.children.map(child => ({
-                        ...child,
-                        viewOnly: isParentCheckedViewAll,
-                        full: false,
-                        create: false,
-                        update: false,
-                        delete: false,
-                    }))
+            }))
+        );
+    }, [isParentCheckedFullAll]);
+
+    useEffect(() => {
+        setModules(prev =>
+            prev.map(parent => ({
+                ...parent,
+                children: parent.children.map(child => ({
+                    ...child,
+                    viewOnly: isParentCheckedViewAll,
+                    full: false,
+                    create: false,
+                    update: false,
+                    delete: false,
                 }))
-            );
-        }, [isParentCheckedViewAll]);
+            }))
+        );
+    }, [isParentCheckedViewAll]);
 
     const isFullAllChecked = modules.every(module =>
         module.children.every(child => child.full && child.create && child.update && child.delete && !child.viewOnly
         )
     );
-
     const isViewOnlyAllChecked = modules.every(module =>
         module.children.every(child => child.viewOnly && !child.full && !child.create && !child.update && !child.delete
         )
     );
+
+    useEffect(() => {
+        fullTwoChecked(isFullAllChecked)
+    }, [isFullAllChecked])
+
+    useEffect(() => {
+        viewAllTwoChecked(isViewOnlyAllChecked)
+    }, [isViewOnlyAllChecked])
 
     const handleParentToggle = (type, checked) => {
         setModules(prev =>
@@ -111,6 +118,7 @@ const DeshBoardTwo = ({isParentCheckedFullAll, isParentCheckedViewAll}) => {
         updated[parentIndex].children[childIndex] = child;
         setModules(updated);
     };
+
 
     return (
         <div style={{ padding: 20 }}>

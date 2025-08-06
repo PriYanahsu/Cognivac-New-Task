@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
+const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll, fullOneChecked, viewAllOneChecked }) => {
     const [modules, setModules] = useState([
         {
             name: 'Permissions',
@@ -12,6 +12,7 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
         }
     ]);
 
+    console.log(isParentCheckedFullAll, '............................DeshBoard');
     useEffect(() => {
         setModules(prev =>
             prev.map(parent => ({
@@ -48,13 +49,21 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
         module.children.every(child =>
             child.full && child.create && child.update && child.delete
         )
-    );    
+    );
 
     const isViewOnlyAllChecked = modules.every(module =>
         module.children.every(child =>
             child.viewOnly && !child.full && !child.create && !child.update && !child.delete
         )
     );
+
+    useEffect(() => {
+        fullOneChecked(isFullAllChecked)
+    }, [isFullAllChecked])
+
+    useEffect(() => {
+        viewAllOneChecked(isViewOnlyAllChecked)
+    }, [isViewOnlyAllChecked])
 
     const handleParentToggle = (type, checked) => {
         setModules(prev =>
@@ -114,6 +123,7 @@ const DeshBoard = ({ isParentCheckedFullAll, isParentCheckedViewAll}) => {
         updated[parentIndex].children[childIndex] = child;
         setModules(updated);
     };
+
 
     return (
         <div style={{ padding: 20 }}>
